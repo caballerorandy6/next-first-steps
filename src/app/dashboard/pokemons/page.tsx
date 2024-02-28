@@ -2,6 +2,7 @@ import { PokemonsResponse } from "@/pokemons/interfaces/pokemons-response";
 import { SimplePokemon } from "@/pokemons/interfaces/simple-pokemon";
 import PokemonGrid from "@/pokemons/components/PokemonGrid";
 
+
 const getPokemons = async (
   limit = 20,
   offset = 0
@@ -14,7 +15,6 @@ const getPokemons = async (
     id: pokemon.url.split("/").at(-2)!,
     name: pokemon.name,
   }));
-
   return pokemons;
 };
 
